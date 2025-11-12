@@ -1,0 +1,17 @@
+langchain==0.2.16
+langchain-core==0.2.38
+langchain-community==0.2.16
+langchain-google-genai==1.0.10
+faiss-cpu==1.8.0
+sentence-transformers==3.0.1
+python-dotenv==1.0.1
+pydantic==1.10.15
+python-multipart==0.0.9
+SpeechRecognition==3.10.3
+pyttsx3==2.90
+pyaudio==0.2.14
+pydub==0.25.1
+requests==2.32.3
+gtts==2.5.4
+pypdf==6.2.0
+langchain-huggingface==0.0.3
