@@ -83,14 +83,14 @@ def falar(texto):
             # Tenta tocar com mpg123 (mais comum no Ubuntu)
             try:
                 subprocess.run(
-                    ["mpg123", "-q", temp_audio.name],
+                    ["mpg123", "-q", "-d", "1", temp_audio.name],
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL
                 )
             except FileNotFoundError:
                 # Fallback: tenta com ffplay (instalado com ffmpeg)
                 subprocess.run(
-                    ["ffplay", "-nodisp", "-autoexit", temp_audio.name],
+                    ["ffplay", "-nodisp", "-autoexit", "-af", "atempo=1.5", temp_audio.name],
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL
                 )
